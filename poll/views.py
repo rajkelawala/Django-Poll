@@ -25,14 +25,14 @@ def create(request):
 def results(request, poll_id):
     poll = Poll.objects.get(pk=poll_id)
     context = {'poll': poll}
-    return render(request, 'results.html', context)  # ✅ Fixed infinite redirect
+    return render(request, 'results.html', context)  
 
 
 def vote(request, poll_id):
     poll = Poll.objects.get(pk=poll_id)
 
     if request.method == 'POST':
-        selected_option = request.POST.get('poll')  # ✅ Fix KeyError issue
+        selected_option = request.POST.get('poll')
         if selected_option == 'option1':
             poll.option_one_count += 1
         elif selected_option == 'option2':
@@ -40,9 +40,9 @@ def vote(request, poll_id):
         elif selected_option == 'option3':
             poll.option_three_count += 1
         else:
-            return HttpResponse("Invalid form option", status=400)  # ✅ Fix error handling
+            return HttpResponse("Invalid form option", status=400) 
 
         poll.save()
-        return redirect('results', poll_id=poll.id)  # ✅ Redirect to results page after voting
+        return redirect('results', poll_id=poll.id) 
 
     return render(request, 'vote.html', {'poll': poll})
