@@ -81,7 +81,7 @@ DATABASES = {
         'NAME': 'poll_app',
         'USER': 'root',
         'HOST': '127.0.0.1',
-        'PASSWORD': 'raj_28092003',
+        'PASSWORD': 'Your Password',
         'PORT': '3306',
     }
 }
