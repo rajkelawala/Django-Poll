@@ -25,7 +25,7 @@ SECRET_KEY = "django-insecure--ffp@xa^_d*m8_l4qtzytcm10go^^n)m*am+lklki7$fz=zvil
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['.vercel.app']
 
 
 # Application definition
@@ -81,7 +81,7 @@ DATABASES = {
         'NAME': 'poll_app',
         'USER': 'root',
         'HOST': '127.0.0.1',
-        'PASSWORD': 'Your Password',
+        'PASSWORD': 'raj_28092003',
         'PORT': '3306',
     }
 }
