@@ -83,6 +83,9 @@ DATABASES = {
         'HOST': '127.0.0.1',
         'PASSWORD': 'raj_28092003',
         'PORT': '3306',
+        'OPTIONS': {
+            'autocommit': True,
+        },
     }
 }
 
